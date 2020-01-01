@@ -1,0 +1,42 @@
+name: Eth H
+description: "Ethan Hulletts personal website"
+baseurl: /eth-h
+url: http://127.0.0.1:4000 
+download: "https://github.com/erayaydin/jekyll-bulma/archive/master.zip"
+social:
+  github: Eth-H
+  email: ethan.hullett@btinternet.com
+  facebook:
+  twitter:
+  instagram:
+  tumblr:
+author:
+  name: Ethan Hullett
+  bio: "Student at Kent University"
+  email: ethan.hullett@btinternet.com
+  image: /assets/images/author.jpg
+  github: Eth-H
+  facebook:
+  twitter:
+  instagram:
+  tumblr:
+  show_on_post: true
+permalink: /:categories/:title/
+sass:
+  style: compressed
+paginate: 5
+paginate_path: "/:num/"
+markdown: kramdown
+
+plugins:
+  - jekyll-paginate
+  - jekyll-feed
+  - jekyll-gist
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE
+  - CNAME
+  - vendor
