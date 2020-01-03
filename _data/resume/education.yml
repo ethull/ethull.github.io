@@ -1,0 +1,27 @@
+--- 
+- 
+  grades: 
+    - "English language [7]"
+    - "English lit [7]"
+    - "maths [8]"
+    - "Core science [A]"
+    - "Additional science [A]"
+    - "Business Studies [A]"
+    - "D&T Electronic Products [A]"
+    - "Geography [A]"
+    - "Computing [A]"
+  type: GCSE
+- 
+  grades: 
+    - "Geography (AS) [A]"
+    - "Computer Science [C]"
+    - "Maths [C]"
+    - "Business Studies [B]"
+  type: "A levels"
+- 
+  grades: "Level 2 ECDL cert in IT application skills (QCF) [Distinction *]"
+  type: BCS
+- 
+  grades: 
+    - "Cyber-start essentials [certification of achievement]"
+  type: government

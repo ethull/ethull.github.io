@@ -1,0 +1,2 @@
+resume page
+    download resume -> technologies/skills -> work experience -> education

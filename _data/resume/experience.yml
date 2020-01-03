@@ -1,0 +1,16 @@
+--- 
+- 
+  company: "ABC Computers"
+  date: "2016 June-July"
+  responsibities: "included building computers for customers, using commercial software packages and processes to maintain customer computers"
+  responsibySummary: "repair and commerce of IT equipment"
+  title: "It solutions assistant"
+  type: placement
+- 
+  company: TrainAsOne
+  date: "2018 June-Aug"
+  responsibities: "maintain tomcat server, develop Postgres and Java skills to develop application, beta test application"
+  responsibySummary: "maintain application"
+  title: "CEO assistant"
+  type: intern
+

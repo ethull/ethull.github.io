@@ -1,8 +1,8 @@
-name: Eth H
+name: Ethan Hullett
 description: "Ethan Hulletts personal website"
-baseurl: /eth-h
+baseurl: /ethull
 url: http://127.0.0.1:4000 
-download: "https://github.com/erayaydin/jekyll-bulma/archive/master.zip"
+download: 
 social:
   github: Eth-H
   email: ethan.hullett@btinternet.com
@@ -15,7 +15,7 @@ author:
   bio: "Student at Kent University"
   email: ethan.hullett@btinternet.com
   image: /assets/images/author.jpg
-  github: Eth-H
+  github: ethull
   facebook:
   twitter:
   instagram:
