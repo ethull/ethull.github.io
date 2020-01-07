@@ -7,4 +7,6 @@ group :jekyll_plugins do
    gem "jekyll-paginate", "~> 1.1.0"
    gem "jekyll-feed", "~> 0.13.0"
    gem "jekyll-gist"
+   gem "jekyll-redirect-from"
+
 end

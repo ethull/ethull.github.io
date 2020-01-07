@@ -1,2 +1,14 @@
-resume page
-    download resume -> technologies/skills -> work experience -> education
+add certain files to ignore
+setup site for github pages
+    get around rss feed plugin github rejection
+        https://github.com/yegor256/jekyll-github-deploy    
+        https://stackoverflow.com/questions/15217357/deploying-jekyll-to-github-pages
+    fix path problem in built site
+        change url automatically
+            https://stackoverflow.com/questions/36866474/how-can-we-use-environment-variables-in-a-jekyll-config-file
+        or have two configs
+            https://jekyllrb.com/docs/configuration/environments/
+        or use rakefile
+            https://github.com/ruby/rake
+
+        //github doesnt recognise baseurl

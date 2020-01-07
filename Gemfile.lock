@@ -247,6 +247,7 @@ DEPENDENCIES
   jekyll-feed (~> 0.13.0)
   jekyll-gist
   jekyll-paginate (~> 1.1.0)
+  jekyll-redirect-from
 
 BUNDLED WITH
    2.1.2

@@ -1,10 +1,10 @@
 name: Ethan Hullett
 description: "Ethan Hulletts personal website"
-baseurl: /ethull
-url: http://127.0.0.1:4000 
+baseurl:
+url: https://ethull.github.io
 download: 
 social:
-  github: Eth-H
+  github: ethull
   email: ethan.hullett@btinternet.com
   facebook:
   twitter:
@@ -32,7 +32,6 @@ plugins:
   - jekyll-paginate
   - jekyll-feed
   - jekyll-gist
-
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -40,3 +39,4 @@ exclude:
   - LICENSE
   - CNAME
   - vendor
+  - dev.sh

@@ -1,27 +1,23 @@
 --- 
 - 
   skills: 
-    - PIP
-    - virtualenv
-  type: python
-- 
-  skills: 
     - HTML5/CSS
     - JavaScript
     - Node.js
     - React.js
+    - jekyll
   type: web
+- 
+  skills: 
+    - PIP
+    - virtualenv
+  type: python
 - 
   skills: 
     - SQLite3
     - PostgreSQL
     - "management with a GUI and/or CLI"
   type: database
-- 
-  skills: 
-    - "Windows DOS"
-    - "Unix shell"
-  type: "command line"
 - 
   skills: 
     - Git
@@ -31,10 +27,12 @@
     - "system admin"
     - "gpg (GNU privacy guard)"
     - "shell scripting"
+    - vim
   type: unix
 - 
   skills: 
     - "word processing apps"
     - "sys-internals tools"
     - debloat
+    - dos
   type: windows

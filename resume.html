@@ -16,16 +16,57 @@ layout: default
 </section>
 <section class="section">
   <div class="container">
-    download cv
+    <div class="box">
+      <a
+        class="button is-primary"
+        style="width: 100%;"
+        href="{{ site.baseurl }}/curriculum_vitae.pdf"
+      >
+        Download resume
+      </a>
+    </div>
   </div>
 </section>
 <section class="section">
-  <h1>skills</h1>
-  {{ site.data.resume.experience}}
+  <h1 class="title">skills</h1>
+  <!--content enables bullet points but increases col proportions (1/3 -> 1/2) -->
+  <div class="columns is-multiline content">
+    {% for group in site.data.resume.skills %}
+    <ul
+      class="column is-4-tablet is-one-fifth-desktop is-2-widescreen is-1-fullhd"
+    >
+      <strong>{{group.type}}</strong>
+      {% for skill in group.skills %}
+      <li>{{ skill }}</li>
+      {% endfor %}
+    </ul>
+    {% endfor %}
+  </div>
 </section>
 <section class="section">
-  work experience
+  <h1 class="title">work experience</h1>
+  {% for job in site.data.resume.experience %}
+  <p style="word-wrap: break-word; width: 30%">
+    <strong>{{job.title}}</strong><br />
+    <i>{{job.company}}, {{job.date}}</i><br />
+    {{job.responsiblities}} <br />
+    &nbsp;
+  </p>
+  {% endfor %}
 </section>
 <section class="section">
-  education
+  <h1 class="title">education</h1>
+  <div class="columns is-multiline content">
+    {% for group in site.data.resume.education %}
+
+    <ul
+      class="column is-one-third-tablet is-one-fifth-desktop is-2-widescreen is-1-fullhd"
+    >
+      <strong>{{group.type}}</strong>
+      {% for grade in group.grades %}
+      <li>{{ grade }}</li>
+      {% endfor %}
+    </ul>
+    {% endfor %}
+  </div>
 </section>
