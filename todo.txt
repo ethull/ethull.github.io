@@ -4,7 +4,10 @@ setup site for github pages
         https://github.com/yegor256/jekyll-github-deploy    
         https://stackoverflow.com/questions/15217357/deploying-jekyll-to-github-pages
 redesign resume
-//other
-        https://stackoverflow.com/questions/36866474/how-can-we-use-environment-variables-in-a-jekyll-config-file
-        or use rakefile
-            https://github.com/ruby/rake
+    new layout
+    better
+
+other
+    https://stackoverflow.com/questions/36866474/how-can-we-use-environment-variables-in-a-jekyll-config-file
+    rakefiles
+        https://github.com/ruby/rake
