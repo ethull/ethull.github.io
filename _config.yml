@@ -40,3 +40,4 @@ exclude:
   - CNAME
   - vendor
   - dev.sh
+  - doc/
