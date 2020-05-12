@@ -3,29 +3,28 @@
   skills: 
     - HTML5/CSS
     - JavaScript
-    - Node.js
-    - React.js
-    - jekyll
+    - PHP
+    - Nodejs
+    - React
+    - Jekyll
   type: web
 - 
   skills: 
-    - PIP
-    - virtualenv
-  type: python
+    - Python
+    - Java
+    - Shell (Bash)
+    - latex
+    - git
+    - markdown
+    - sql
+  type: "scripting/dev"
 - 
   skills: 
-    - SQLite3
-    - PostgreSQL
-    - "management with a GUI and/or CLI"
-  type: database
-- 
-  skills: 
-    - Git
-  type: VCS
-- 
-  skills: 
-    - "system admin"
-    - "gpg (GNU privacy guard)"
+    - "maintenance"
+    - "repair: chroot, grub, network"
+    - "pkg manager"
+    - "patch/compile c"
+    - "gpg (GNU PGP)"
     - "shell scripting"
     - vim
   type: unix
@@ -34,5 +33,4 @@
     - "word processing apps"
     - "sys-internals tools"
     - debloat
-    - dos
   type: windows
