@@ -8,8 +8,6 @@ comments: true
 date: 2020-05-12T20:34:04+01:00
 permalink: vim-ide-p1.html
 ---
-
-## intro
 IDEs have lots of features and generally can support most of a programmers needs.
 But they can be bloated and on older hardware can be slow. Further more, if the IDE is 
 properitary you may have to pay for full functionality or spend time signing up.
