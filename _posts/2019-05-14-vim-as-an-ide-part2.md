@@ -15,16 +15,16 @@ But this part focuses on setup for intellisense features that increase coding pe
 ## install languages to the system
 Install the languages/tools your vim will need to support. If your language is constantly updated, your distribution may not have the latest package, for example ubuntu generally has verions of nodejs and npm that aren't compatible with each other.
 - javascipt
-```
+```sh
 curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
 - python interpreter, pip3 package manager
-```
+```sh
 sudo apt install -y python3 pip3
 ```
 - texlive cross platofrm latex system, latexmk compiler
-```
+```sh
 sudo apt install texlive-latex-extra
 sudo apt install latexmk
 ```
