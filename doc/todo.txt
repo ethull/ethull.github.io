@@ -1,4 +1,3 @@
-add certain files to ignore
 setup site for github pages
     get around rss feed plugin github rejection
         https://github.com/yegor256/jekyll-github-deploy    
@@ -11,3 +10,13 @@ other
     https://stackoverflow.com/questions/36866474/how-can-we-use-environment-variables-in-a-jekyll-config-file
     rakefiles
         https://github.com/ruby/rake
+
+post ideas
+    get hardware working on linux
+    setup vim as an ide
+    multi-file vim structure
+    managing services with systemctl
+    fix bootmanager
+    gpg verifying isos
+    settup suckless programs
+    mimialist programs
