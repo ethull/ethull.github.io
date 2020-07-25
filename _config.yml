@@ -26,7 +26,13 @@ sass:
   style: compressed
 paginate: 5
 paginate_path: "/:num/"
+
+highlighter: rouge
 markdown: kramdown
+kramdown:
+  input: GFM
+  auto_ids: true
+  syntax_highlighter: rouge
 
 plugins:
   - jekyll-paginate
@@ -41,3 +47,4 @@ exclude:
   - vendor
   - dev.sh
   - doc/
+
