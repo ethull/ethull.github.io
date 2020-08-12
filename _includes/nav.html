@@ -4,6 +4,12 @@
       <a href="{{ "/" | prepend: site.baseurl }}" class="navbar-item">
       {{ site.name }}
       </a>
+      <a href="{{ "/about" | prepend: site.baseurl }}" class="navbar-item">
+      <span class="icon">
+          <i class="fa fa-address-card"></i>
+      </span>
+      </a>
+
       {% if site.social.github %}
       <a href="https://github.com/{{ site.social.github }}" class="navbar-item is-hidden-desktop">
       <span class="icon">
