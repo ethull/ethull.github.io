@@ -1,11 +1,11 @@
 ---
 layout: post
-title: dealing with people
+title: Post - dealing with people
 description: advice on how to systematically deal with people
 categories:
     - Post
 comments: true
-date: 2020-07-22T15:51:03+01:00
+date: 2020-05-17T12:50:00+01:00
 permalink: dealing-with-ppl.html
 ---
 
