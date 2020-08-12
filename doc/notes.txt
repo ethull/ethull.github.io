@@ -11,3 +11,10 @@ github pages options
 if you need different config for development and production (likely)
     put dev options also in _dev_config.yml and they will be overwriten
     bundle exec jekyll serve --livereload --config _config.yml,_dev_config.yml
+
+populize blogging
+    http://www.mastermindblogger.com/9-killer-ways-to-make-your-blog-popular/
+    http://www.mastermindblogger.com/10-important-tips-to-increase-your-blog-traffic-part-2/
+    https://neilpatel.com/blog/guide-to-guest-blogging/
+    https://neilpatel.com/blog/drive-the-best-traffic/
+    https://dev.to/

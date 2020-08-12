@@ -12,11 +12,30 @@ other
         https://github.com/ruby/rake
 
 post ideas
-    get hardware working on linux
-    setup vim as an ide
+    done
+        get hardware working on linux
+        setup vim as an ide
+        how to debootstrap a system
+        configuring xfce4
+            swap desktop environment from a distro
+
+    terminal environment - vim,vifm,tmux
+    vifm
+
+    searching large volumes of options with react select
+    how to protect yourself on the internet
     multi-file vim structure
     managing services with systemctl
     fix bootmanager
     gpg verifying isos
     settup suckless programs
     mimialist programs
+    change default applications with xdg
+
+add guest addition page
+add welcome page
+promote blog
+    write guest blog articles, and link this articles
+external links
+    link recomended websites
+    guest posts
