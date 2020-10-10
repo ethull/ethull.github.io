@@ -49,7 +49,7 @@ Its natural for people to get angry and most people will struggle to deal with t
 - get opinions of the problem from other workers
 - if small solve the problem yourself, otherwise take to management
 
-### getting people to do what you want
+### persuading people to do something
 It can be diffcult to convince someone to do a task, even if that task needs to be done for that individuals good.
 - persuade them over telling them
 
@@ -77,5 +77,10 @@ It can be diffcult to convince someone to do a task, even if that task needs to 
 - avoid pessimisum
     - encouraging statements on how things may get better
     - try and instead get people to work together to come up with a solution
+- own motivation
+    - motivating yourself, just getting a jolt of motivation is unlikely to work in the long term
+    - external motivation: add an external factor that makes it harder to not do what you need to do, EG commit with money or tell people
+    - discipline: strong mind and conviction, setting a minimum standard for what you have to do, EG always get up after alarm clock
+
 
 this article is incomplete and still has improvements to be made
