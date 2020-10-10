@@ -21,7 +21,13 @@ post ideas
 
     terminal environment - vim,vifm,tmux
     vifm
+    my dotfiles
 
+    help sources
+    useful tools
+    git and github, prs and rebasing
+    tech blogs
+    some algorithm
     searching large volumes of options with react select
     how to protect yourself on the internet
     multi-file vim structure
