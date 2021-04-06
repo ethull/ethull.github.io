@@ -1,3 +1,10 @@
+update dependancies
+    https://pages.github.com/versions/
+    https://rubygems.org/gems/github-pages
+    https://jekyllrb.com/docs/github-pages/
+    https://docs.github.com/en/github-ae@latest/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll
+    https://github.com/ethull/ethull.github.io/security/dependabot/
+
 setup site for github pages
     get around rss feed plugin github rejection
         https://github.com/yegor256/jekyll-github-deploy    
@@ -19,10 +26,19 @@ post ideas
         configuring xfce4
             swap desktop environment from a distro
 
+    life skills
+        mental strength
+        how to learn
+        how to time keep / juggle tasks
+        how to deal with ppl 2
+        cooking / convieniant foods
+    bookmark management
+    how to manage projects on a computer
     terminal environment - vim,vifm,tmux
     vifm
     my dotfiles
 
+    getting a year in industry placement
     help sources
     useful tools
     git and github, prs and rebasing
