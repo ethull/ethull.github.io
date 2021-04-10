@@ -2,7 +2,7 @@
 layout: post
 title: Markup - HTML Tags and Formatting
 categories:
-    - Markup
+    - JekyllDefault
 comments: true
 permalink: html-tags-formatting.html
 ---

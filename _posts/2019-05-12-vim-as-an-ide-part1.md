@@ -4,6 +4,7 @@ title: Post - Vim as an IDE part 1
 description: Article on how to setup vim to function as a lightweight IDE
 categories:
     - Post
+    - Vim
 comments: true
 date: 2020-05-12T20:34:04+01:00
 permalink: vim-ide-p1.html

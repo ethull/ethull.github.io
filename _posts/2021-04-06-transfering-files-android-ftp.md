@@ -4,6 +4,7 @@ title: Post - transfer files to android using ftp
 description: article on how to move files between linux and android using ftp
 categories:
     - Post
+    - Android
 comments: true
 date: 2021-04-06T18:24:49+01:00
 permalink: android-ftp.html

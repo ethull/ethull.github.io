@@ -1,0 +1,10 @@
+dont have to be too specific
+    only include a tag for the most relevant category
+
+post
+tech
+    android
+    linux
+    vim
+    dev
+social

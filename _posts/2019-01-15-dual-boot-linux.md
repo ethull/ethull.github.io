@@ -4,6 +4,7 @@ title: Post - Dual boot linux
 description: Article on how to dual boot linux
 categories:
     - Post
+    - Linux
 comments: true
 date: 2019-09-01T14:58:00.000Z
 permalink: dual-boot-linux.html

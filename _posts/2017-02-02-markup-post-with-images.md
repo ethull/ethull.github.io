@@ -3,7 +3,7 @@ layout: post
 title: Markup - Post with Images
 description: Displaying images in posts
 categories:
-    - Markup
+    - JekyllDefault
 comments: true
 permalink: post-with-images.html
 ---
