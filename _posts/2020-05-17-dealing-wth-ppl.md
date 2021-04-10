@@ -1,9 +1,8 @@
 ---
 layout: post
-title: Post - dealing with people
+title: Dealing with people
 description: advice on how to systematically deal with people
 categories:
-    - Post
     - Social
 comments: true
 date: 2020-05-17T12:50:00+01:00

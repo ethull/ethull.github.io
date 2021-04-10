@@ -1,9 +1,8 @@
 ---
 layout: post
-title: Post - deboostrap a debian system
+title: Deboostrap a debian system
 description: deboostrap a debian system
 categories:
-    - Post
     - Linux
 comments: true
 date: 2020-07-31T17:30:00+01:00

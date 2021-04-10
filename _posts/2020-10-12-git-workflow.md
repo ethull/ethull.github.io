@@ -1,9 +1,8 @@
 ---
 layout: post
-title: Post - basic git workflows
+title: Basic git workflows
 description: article on using git collabratively
 categories:
-    - Post
     - Dev
 comments: true
 date: 2020-10-12T12:22:00+01:00

@@ -1,9 +1,8 @@
 ---
 layout: post
-title: Markup - Syntax Highlighting
+title: Syntax Highlighting
 description: Testing syntax highlighting on Jekyll Bulma theme.
 categories:
-    - JekyllDefault
 thumbnail: /assets/images/posts/syntax.jpg
 comments: true
 permalink: syntax-highlighting.html

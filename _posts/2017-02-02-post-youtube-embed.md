@@ -1,8 +1,7 @@
 ---
 layout: post
-title: Post - Youtube Embed
+title: Youtube Embed
 categories:
-    - JekyllDefault
 comments: true
 permalink: youtube-embed.html
 ---

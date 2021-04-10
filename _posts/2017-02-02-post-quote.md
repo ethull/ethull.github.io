@@ -1,8 +1,7 @@
 ---
 layout: post
-title: Post - Quote
+title: Quote
 categories:
-    - JekyllDefault
 comments: true
 permalink: quote.html
 ---
