@@ -7,4 +7,3 @@ vendor
 .ruby-version
 *.swp
 *.swo
-date_gen.sh
