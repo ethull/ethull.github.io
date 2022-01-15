@@ -71,17 +71,22 @@
         </a>
       </div>
       <div class="navbar-end">
-        {% if site.social.github %}
-        <a href="https://github.com/{{ site.social.github }}" class="navbar-item is-hidden-desktop-only">
+        <a href="{{ "/feed.xml" | prepend: site.baseurl }}" class="navbar-item is-hidden-desktop-only">
         <span class="icon">
-            <i class="fa fa-github"></i>
+            <i class="fa fa-rss"></i>
         </span>
         </a>
-        {% endif %}
         {% if site.social.email %}
         <a href="mailto:{{ site.social.email }}" class="navbar-item is-hidden-desktop-only">
         <span class="icon">
             <i class="fa fa-envelope-o"></i>
+        </span>
+        </a>
+        {% endif %}
+        {% if site.social.github %}
+        <a href="https://github.com/{{ site.social.github }}" class="navbar-item is-hidden-desktop-only">
+        <span class="icon">
+            <i class="fa fa-github"></i>
         </span>
         </a>
         {% endif %}
