@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Transfer files to android using ftp
-description: article on how to move files between linux and android using ftp
+description: Article on how to move files between linux and android using ftp
 categories:
     - Android
 comments: true
@@ -11,11 +11,11 @@ permalink: android-ftp.html
 
 A common way to transfer files between android and desktop, is to physically plug the phone into the computer, and then transfer files via the mtp (media transder protocol). But this protocol is slow and buggy, and its likely to cause problems when transfering large volumes of files. One alternative to use the ftp protocol.
 
-## intro
+## Introduction
 
 This solution involves running a ftp server on an android phone, and then using a ftp client on the desktop to comunicate with it. The server is installed the phone because this provides more flexibility (than a linux daemon).
 
-## setup the server
+## Setup the server
 - program used: primitive ftpd (https://f-droid.org/en/packages/org.primftpd)
 - a simple ftp server
 - after install select: Android Storage Access Framework (SAF)
@@ -25,7 +25,7 @@ This solution involves running a ftp server on an android phone, and then using 
     - change port if needed (default is 12345)
 - when you want to run the ftp server, press the play button
 
-## setup the client
+## Setup the client
 - program used: cbftp (https://cbftp.eu)
 - a minimalistic terminal UI (ncurses) ftp client built in cpp
 
@@ -47,7 +47,7 @@ in app setup:
     - you likely dont need to change any other options
 - press d: finish configuration
 
-## transfer files
+## Transfer files
 - make sure ftpd is running and cbftp has the right credentials
 
 from cbftp:

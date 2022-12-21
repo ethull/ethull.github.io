@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Basic git workflows
-description: article on using git collabratively
+description: Article on using git collabratively
 categories:
     - Dev
 comments: true
@@ -9,19 +9,19 @@ date: 2020-10-12T12:22:00+01:00
 permalink: git-workflow.html
 ---
 
-use git with a basic forking workflow
+Use git with a basic forking workflow.
 
-### intro
-guide to use git with a basic workflow, which will involve:
+### Introduction
+Guide to use git with a basic workflow, which will involve:
 - forking a repo and making changes
 - within fork having a separate branch for features
 - merging forks feature branches into central/main repo
 
-#### process
+#### Process
 
 fork repo -> locally clone -> new local feature branch created -> branch pushed to forked repo -> open a pull request from the forks new branch to the official repo -> if approved the branch is merged in the official repo
 
-### contribute to open source repo
+### Contribute to open source repo
 - fork repo on github
     - go to the repositary on github, and fork it under your own username
 
@@ -54,7 +54,7 @@ git push -u origin username-feature
     
     merge your feature branch into master branch or the dev branch (if it exists)
 
-### incorporating changes to a fork after upstream changes
+### Incorporating changes to a fork after upstream changes
 Someone else may of made a pull request and had their changes merged, so now your repo doesnt have the latest updates. Somehow these changes need to be pulled down and joined with your fork before you can pull request
 
 - add the original repo as upstream remote and fetch references
