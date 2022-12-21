@@ -4,7 +4,7 @@ layout: default
 
 <section class="hero is-primary">
   <div class="hero-body">
-    <div class="container is-fluid">
+    <div class="container">
       <h1 class="title">
         {{ page.title }}
       </h1>
@@ -15,7 +15,7 @@ layout: default
   </div>
 </section>
 <section class="section">
-  <div class="container is-fluid">
+  <div class="container">
     <div class="content">
       {{ content }}
     </div>
@@ -23,7 +23,7 @@ layout: default
 </section>
 {% if site.author.show_on_post or page.comments %}
 <div class="section">
-  <div class="container is-fluid">
+  <div class="container">
     {% if site.author.show_on_post %}
     <div class="box">
       <div class="media">

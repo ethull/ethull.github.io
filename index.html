@@ -3,7 +3,7 @@ layout: default
 ---
 <section class="hero is-primary">
     <div class="hero-body">
-        <div class="container is-fluid">
+        <div class="container">
             <h1 class="title">
                 Blog
             </h1>
@@ -14,7 +14,7 @@ layout: default
     </div>
 </section>
 <section class="section">
-    <div class="container is-fluid">
+    <div class="container">
         {% for post in paginator.posts %}
         <div class="card post-card">
             {% if post.thumbnail %}
