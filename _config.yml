@@ -24,11 +24,18 @@ author:
   tumblr:
   show_on_post: true
 
-permalink: /:categories/:title/
 sass:
   style: compressed
-paginate: 5
-paginate_path: "/:num/"
+permalink: /:categories/:title/
+
+pagination:
+  enabled: true
+  debug: false
+  per_page: 5
+  collection: "posts"
+  permalink: "/page/:num/"
+  sort_field: 'date'
+  sort_reverse: true
 
 highlighter: rouge
 markdown: kramdown
