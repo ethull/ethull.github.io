@@ -3,6 +3,7 @@ description: "Ethan Hulletts personal website"
 baseurl:
 url: https://ethull.github.io
 download: 
+
 social:
   github: ethull
   email: ethull@protonmail.com
@@ -10,6 +11,7 @@ social:
   twitter:
   instagram:
   tumblr:
+
 author:
   name: Ethan Hullett
   bio: "Student at Kent University"
@@ -21,6 +23,7 @@ author:
   instagram:
   tumblr:
   show_on_post: true
+
 permalink: /:categories/:title/
 sass:
   style: compressed
@@ -35,9 +38,12 @@ kramdown:
   syntax_highlighter: rouge
 
 plugins:
-  - jekyll-paginate
+  - jekyll-paginate-v2
   - jekyll-feed
   - jekyll-gist
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+
 exclude:
   - Gemfile
   - Gemfile.lock
