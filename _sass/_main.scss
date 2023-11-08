@@ -1,0 +1,14 @@
+// import sass files and packages
+
+// bulma
+@import "../node_modules/bulma/bulma.sass";
+@import "../node_modules/bulma-block-list/src/block-list.scss";
+
+// font awesome
+//$fa-font-path: '../node_modules/@fortawesome/fontawesome-free/webfonts';
+@import "../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
+
+// sass vars
+@import "variables";

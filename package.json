@@ -1,0 +1,17 @@
+{
+    "name": "ethull-blog",
+    "description": "Simple blog built with Jekyll and Bulma",
+    "version": "1.0.0",
+    "main": "index.js",
+    "devDependencies": {},
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "chrisrhymes",
+    "license": "MIT",
+    "dependencies": {
+        "@fortawesome/fontawesome-free": "^6.4.2",
+        "bulma": "^0.9.3",
+        "bulma-block-list": "^0.7"
+    }
+}
