@@ -12,15 +12,13 @@
     </div>
     <div id="navMenubd-main" class="navbar-menu">
       <div class="navbar-start">
-        <!--
-        <a href="{{ "/" | prepend: site.baseurl }}" class="navbar-item {% if page.url == "/" %} is-active {% endif %}">
-        Blog
-        </a>
-        -->
         <a href="{{ "/about" | prepend: site.baseurl }}" class="navbar-item">
         <span class="icon">
             <i class="fa fa-address-card"></i>
         </span>
+        </a>
+        <a href="{{ "/blog" | prepend: site.baseurl }}" class="navbar-item {% if page.url == "/" %} is-active {% endif %}">
+        Blog
         </a>
         <a href="{{ "/categories" | prepend: site.baseurl }}" class="navbar-item {% if page.url == "/categories/" %} is-active {% endif %}">
         categories
