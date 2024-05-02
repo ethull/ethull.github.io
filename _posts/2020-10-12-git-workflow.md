@@ -8,7 +8,6 @@ comments: true
 date: 2020-10-12T12:22:00+01:00
 permalink: git-workflow.html
 ---
-
 Use git with a basic forking workflow.
 
 ### Introduction

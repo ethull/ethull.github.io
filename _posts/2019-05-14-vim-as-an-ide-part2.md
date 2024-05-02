@@ -8,6 +8,9 @@ comments: true
 date: 2020-05-12T20:34:04+01:00
 permalink: vim-ide-p2.html
 ---
+Replace IDE's with vim?
+
+## introduction
 This is an extension to my first vim-ide post.
 But this part focuses on setup for intellisense features that increase coding performance, like scanning for errors, autocompletion, refractoring and more.
 

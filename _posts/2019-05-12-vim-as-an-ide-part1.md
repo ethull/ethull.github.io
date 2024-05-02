@@ -8,18 +8,19 @@ comments: true
 date: 2020-05-12T20:34:04+01:00
 permalink: vim-ide-p1.html
 ---
+Get vim setup.
+
+## introduction
 IDEs have lots of features and generally can support most of a programmers needs.
 But they can be bloated and on older hardware can be slow. Further more, if the IDE is 
 properitary you may have to pay for full functionality or spend time signing up.
 
 Vim is highly customizable and has multiple modes for productivity, with the right plugins you can make it into a multi-language IDE.
 
-There is a lot of plugins so I'll split it into 2 parts with this part showing essentional setup.
-
 ## prerequisits
 Basic knowledge of vim configuration.
 
-### proper vim package
+### installing vim on ubuntu
 Some distributions come shipped with vim-tiny or just terminal vim, and these packages normally lack functionality.
 Where as the graphical package contains all vim functionality, its good to have even if you dont use graphical vim.
 The package has different names between distribtuions but generally its called vim-gtk3 or gvim.
