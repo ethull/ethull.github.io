@@ -6,6 +6,7 @@ categories:
     - Android
 comments: true
 date: 2021-04-06T18:24:49+01:00
+display-date: 2021-04-06
 permalink: android-ftp.html
 ---
 Transfer files from linux to android with mtp.

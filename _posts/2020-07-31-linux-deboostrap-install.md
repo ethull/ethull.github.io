@@ -6,6 +6,7 @@ categories:
     - Linux
 comments: true
 date: 2020-07-31T17:30:00+01:00
+display-date: 2020-07-31
 permalink: linux-deboostrap-install.html
 ---
 Install debian without an iso.

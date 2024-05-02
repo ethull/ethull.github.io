@@ -6,6 +6,7 @@ categories:
     - Linux
 comments: true
 date: 2019-09-01T14:58:00.000Z
+display-date:  2019-09-01
 permalink: dual-boot-linux.html
 ---
 Install both windows and linux on the same computer.

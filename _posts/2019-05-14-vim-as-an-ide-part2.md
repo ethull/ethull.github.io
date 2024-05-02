@@ -6,6 +6,7 @@ categories:
     - Vim
 comments: true
 date: 2020-05-12T20:34:04+01:00
+display-date:  2020-05-12
 permalink: vim-ide-p2.html
 ---
 Replace IDE's with vim?
