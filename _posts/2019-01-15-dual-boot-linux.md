@@ -4,7 +4,6 @@ title: Dual boot linux
 description: Article on how to dual boot linux
 categories:
     - Linux
-tag: Highlight
 comments: true
 date: 2019-09-01T14:58:00.000Z
 display-date:  2019-09-01

@@ -4,7 +4,7 @@ title: Build and push a docker image to AWS ECR using colima
 description: Article on how to build/deploy docker images using colima
 categories:
     - Docker
-tag: Project
+tag: Highlight
 comments: true
 date: 2024-05-01T19:30:49+01:00
 display-date: 2024-05-01
