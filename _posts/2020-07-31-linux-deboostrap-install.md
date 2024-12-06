@@ -6,9 +6,12 @@ categories:
     - Linux
 comments: true
 date: 2020-07-31T17:30:00+01:00
+display-date: 2020-07-31
 permalink: linux-deboostrap-install.html
 ---
+Install debian without an iso.
 
+### introduction
 Normally to install a linux distribution, you would download an iso, burn it to a usb with something like rufus or etcher, and then boot into it. But this can be timely and hard to automate, an experienced user may prefer to create a system from their already existing distribution.
 
 ### create partition
