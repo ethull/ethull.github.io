@@ -2,21 +2,9 @@
 layout: default
 pagination:
   enabled: true
+hero_title: "Tech Blog"
+hero_subtitle: "Latest posts and articles"
 ---
-
-<section class="hero is-primary is-small">
-    <div class="hero-body">
-        <div class="container">
-            <h1 class="title">
-                Tech Blog
-            </h1>
-            <h2 class="subtitle">
-            </h2>
-        </div>
-    </div>
-</section>
-<section class="section">
-    <div class="container">
         {% for post in paginator.posts %}
         <div class="card post-card">
             {% if post.thumbnail %}
@@ -87,5 +75,3 @@ pagination:
             </ul>
         </nav>
         {% endif %}
-    </div>
-</section>

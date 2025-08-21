@@ -41,8 +41,22 @@ body {
   flex: 1 0 auto;
 }
 
+// Hero section spacing
+.hero + .site-grid {
+  margin-top: 0; // Remove gap between hero and grid
+}
+
+// Consistent hero heights
+.hero.is-small .hero-body {
+  min-height: 8rem; // Matches typical title + subtitle height
+  display: flex;
+  align-items: center; // Center content vertically
+}
+
 // 3-Column Responsive Grid System
 .site-grid {
+  padding: 2rem 0; // Add vertical spacing
+  
   .columns {
     margin: 0; // Remove default Bulma margins
     min-height: auto;
@@ -76,6 +90,12 @@ body {
         width: 66.66667%; // 8/12 columns
         max-width: none; // Use grid width on desktop
         padding: 0 1rem; // Maintain padding on desktop
+        
+        // Constrain content width within the grid column for readability
+        .section .content {
+          max-width: 65ch; // Optimal reading width (characters per line)
+          margin: 0 auto; // Center the constrained content
+        }
       }
     }
     
@@ -117,6 +137,20 @@ body {
       color: #666;
       font-size: 0.875rem;
     }
+  }
+}
+
+// Author section styling for posts
+.author-section {
+  margin-top: 2rem;
+  border-top: 1px solid #e5e5e5;
+  padding-top: 2rem;
+  
+  // Constrain width on desktop like content
+  @media screen and (min-width: 1024px) {
+    max-width: 65ch;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 

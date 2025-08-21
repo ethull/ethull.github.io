@@ -1,21 +1,8 @@
 ---
 layout: default
+hero_title: "Blog Categories"
+hero_subtitle: "Cool categories"
 ---
-
-<section class="hero is-primary is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h1 class="title">
-        Blog Catergories
-      </h1>
-      <h2 class="subtitle">
-        cool catergories
-      </h2>
-    </div>
-  </div>
-</section>
-<section class="section">
-  <div class="container">
     <aside class="menu">
       {% for category in site.categories %} {% capture category_name %}{{
       category | first }}{% endcapture %}
@@ -29,5 +16,3 @@ layout: default
       </ul>
       {% endfor %}
     </aside>
-  </div>
-</section>

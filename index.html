@@ -1,20 +1,8 @@
 ---
 layout: default
+hero_title: "Blog"
+hero_subtitle: "Post Highlights"
 ---
-<section class="hero is-primary is-small">
-    <div class="hero-body">
-        <div class="container">
-            <h1 class="title">
-                Hello Hello
-            </h1>
-            <h2 class="subtitle">
-            </h2>
-        </div>
-    </div>
-</section>
-<section class="section">
-    <div class="container">
-        <h1 class="title is-5">Post Highlights</h1>
             {% for post in site.tags["Highlight"] %}
                 <div class="card post-card">
                     {% if post.thumbnail %}
@@ -42,5 +30,3 @@ layout: default
                 </div>
             </li>
             {% endfor %}
-    </div>
-</section>

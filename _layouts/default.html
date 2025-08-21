@@ -14,6 +14,28 @@
 <body>
     <div class="main-content">
         {% include nav.html %}
+        <section class="hero is-primary is-small">
+          <div class="hero-body">
+            <div class="container is-max-widescreen">
+              <h1 class="title">
+                {% if page.layout == 'post' %}
+                  {{ page.title }}
+                {% else %}
+                  {{ page.hero_title }}
+                {% endif %}
+              </h1>
+              {% if page.layout == 'post' and page.description %}
+                <h2 class="subtitle">
+                  {{ page.description }}
+                </h2>
+              {% elsif page.hero_subtitle %}
+                <h2 class="subtitle">
+                  {{ page.hero_subtitle }}
+                </h2>
+              {% endif %}
+            </div>
+          </div>
+        </section>
         <div class="site-grid">
             <div class="columns">
                 <aside class="column sidebar-left">
