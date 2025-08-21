@@ -41,8 +41,82 @@ body {
   flex: 1 0 auto;
 }
 
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 768px !important;
+// 3-Column Responsive Grid System
+.site-grid {
+  .columns {
+    margin: 0; // Remove default Bulma margins
+    min-height: auto;
+    
+    .sidebar-left {
+      // Hidden on mobile/tablet, visible on desktop
+      display: none;
+      
+      @media screen and (min-width: 1024px) {
+        display: block;
+        flex: none;
+        width: 16.66667%; // 2/12 columns
+        padding-left: 1rem;
+        padding-right: 0.5rem;
+      }
+    }
+    
+    .main-content-inner {
+      // Full width on mobile/tablet, centered content
+      width: 100%;
+      margin: 0 auto;
+      max-width: 768px; // Maintain readable line length
+      padding: 0 1rem; // Add horizontal padding on all screens
+      
+      @media screen and (min-width: 768px) {
+        max-width: 900px; // Slightly wider on tablet
+      }
+      
+      @media screen and (min-width: 1024px) {
+        flex: none;
+        width: 66.66667%; // 8/12 columns
+        max-width: none; // Use grid width on desktop
+        padding: 0 1rem; // Maintain padding on desktop
+      }
+    }
+    
+    .sidebar-right {
+      // Hidden on mobile/tablet, visible on desktop  
+      display: none;
+      
+      @media screen and (min-width: 1024px) {
+        display: block;
+        flex: none;
+        width: 16.66667%; // 2/12 columns
+        padding-left: 0.5rem;
+        padding-right: 1rem;
+      }
+    }
+  }
 }
+
+// Sidebar Content Styling
+.sidebar-content {
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  
+  .title {
+    margin-bottom: 0.5rem;
+    color: #363636;
+  }
+  
+  .content {
+    margin-bottom: 0;
+    
+    ul {
+      margin-top: 0.5rem;
+    }
+    
+    p {
+      color: #666;
+      font-size: 0.875rem;
+    }
+  }
+}
+

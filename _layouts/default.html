@@ -14,7 +14,41 @@
 <body>
     <div class="main-content">
         {% include nav.html %}
-        {{ content }}
+        <div class="site-grid">
+            <div class="columns">
+                <aside class="column sidebar-left">
+                    {% if page.layout == 'post' %}
+                        <div class="sidebar-content">
+                            <h6 class="title is-6">Post Navigation</h6>
+                            <div class="content is-small">
+                                <p>Table of contents and related posts will go here.</p>
+                                <ul>
+                                    <li><a href="#introduction">Introduction</a></li>
+                                    <li><a href="#conclusion">Conclusion</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    {% endif %}
+                </aside>
+                <main class="column main-content-inner">
+                    {{ content }}
+                </main>
+                <aside class="column sidebar-right">
+                    {% if page.layout == 'post' %}
+                        <div class="sidebar-content">
+                            <h6 class="title is-6">Site Index</h6>
+                            <div class="content is-small">
+                                <p>Recent posts and categories will go here.</p>
+                                <ul>
+                                    <li><a href="/blog">Recent Posts</a></li>
+                                    <li><a href="/categories">Categories</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    {% endif %}
+                </aside>
+            </div>
+        </div>
     </div>
     {% include footer.html %}
 
