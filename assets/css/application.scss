@@ -154,3 +154,59 @@ body {
   }
 }
 
+// Fix mobile overflow issues in post content
+.content {
+  // Ensure all content stays within viewport bounds
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  
+  // Code blocks - prevent horizontal overflow
+  pre {
+    overflow-x: auto;
+    white-space: pre;
+    word-wrap: normal;
+    max-width: 100%;
+    
+    // On mobile, ensure code blocks scroll instead of overflow
+    @media screen and (max-width: 768px) {
+      font-size: 0.875rem; // Slightly smaller on mobile
+      padding: 0.75rem;
+    }
+  }
+  
+  // Inline code elements
+  code {
+    word-wrap: break-word;
+    word-break: break-all;
+    white-space: pre-wrap;
+  }
+  
+  // Handle long URLs and strings
+  p, li {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+  }
+  
+  // Tables - make them responsive
+  table {
+    width: 100%;
+    overflow-x: auto;
+    display: block;
+    white-space: nowrap;
+    
+    @media screen and (max-width: 768px) {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+  }
+  
+  // Images - ensure they don't overflow
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
