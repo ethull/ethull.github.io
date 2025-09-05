@@ -15,86 +15,131 @@ Guide for using agentic ai coding tools via vibe-planning methodology
 
 ## Introduction
 
-### What is the scope for this post?
-- This post is focusing on: AI assisted coding with a human in the loop (ai-pair-programming) with a focus on strong planning throughout and attention to detail (vibe-planning)
+AI Agent coding tools such as copilot, cline and claude-code have taken off recently. These tools can enable us to go faster but there are some easy to fall into traps, this post suggests some general tips to get around these so we can make best use of these tools to go faster where we can effectively.
+
+Note on scope:
+- This post is focusing on: AI assisted coding with a human in the loop (ai-pair-programming) with a focus on strong planning throughout (vibe-planning)
 - It is not focusing on: Autonomous multi-agent workflow with minimal human interaction in the process (see claude-flow, devin ...)
 
-### Fundamental problems with Gen AI
-There are some fundamental problems with Gen AI, that feed into the coding tools. We need to consider when working with it as they lead to quite a few issues down the road, and when things start to get complex.
+## What are the problems
 
-1. Gen AI is too literal
-	- Its a yes-man: Will always trust the user, rather than questioning if they are wrong, because it can't see gray lines between black and white
-	- Its a perfectionist and its siloed: it will focus too much on one direction / rabbithole, focusing on little things, rather than stopping to reasses whats important or how we have done
-	- Its too eager / gunong hoe: will try and do everything at once / in one swoop. Will go ahead even if lacking information.
-2. Gen AI brain is similar to a human
-	- It needs a plan to refer back to or it will get confused
-	- It forgets things the less it is reminded
-	- It gets clogged up and can't focus when it is
-    - Its better at doing one thing at a time
-3. Gen AI is not a mind reader
-	- It can't consider everything in your brain: it WILL miss things, espically if not reminded
-
-Here is some example scenarios
-1. 
+### Here's a recurring scenario you might notice ...
 - You spend a decent amount of time providing ai with some requirements
 - then you let the ai code for 5 minutes while doing something else
-- the ai goes deep into a rabbithole, adding most of the code into one file, without reusing existing code, while also adding features and changing things we don't want / didn't ask for
-- when you get back turns out you missed an important concern or didn't guardrail the ai enougth
-- now you have a huge mess to refactor and discern whats right and whats wrong, or you have to start all over again with new requirements
+- you come back and:
+    - the ai has gone into a rabbithole and done a terrible job
+    - it has created a 2000 line file, not reused existing code, added features we didn't ask for and changed things we didn't ask it to change
+- now you have two choices
+    - refactor the huge mess and discern right from wrong
+    - start all over again with new requirements
 
-    - // the point is without proper planning the ai can't function well
+Or anouther scenario:
+- You give the AI as much context about the project as possible
+- The AI seems to do a pretty good job at first
+- After coding the first part of the feature, it starts going off the rails and halucinating, its forgotten basic things you told it about before
+- So we end up with a half completed project, and we have to remind AI everything again ...
 
-2. 
-- You try and feed the AI tool as much context about the project as possible, such as logs of who has done what and when
-- The AI seems to do a pretty good job at first, but then it gradually starts going off the rails and starts providing lower quality responses, eventually if might even start halucinating all together, leaving a half dead conversation history and half completed code feature.
-- After starting again and providing specific context just about the task and high level about the project, the model seems to stay on track and do a better job
+### Fundamental problems with Gen AI
+There are some fundamental problems with Gen AI (some of which are also fundamental problems with humans...) that feed into the coding tools. Alot of which might be common sense but easy to miss. We need to consider these when working with these tools as they lead to quite a few issues down the road, espically when things start to get complex or we have to iterate on something rather than start anew.
 
-## Working with ai coding tools
+1. Gen AI is too literal. It can struggle with seeing the shades of gray between black and white, which means:
+	- Its a yes-man: it wants to make you happy and trusts you, and it always needs to have an answer, so it will take your word as it is, rather than questioning if you are wrong
+	- Its a perfectionist: it will focus too much on one direction, leaving out other crucial things and focusing on the little things we might not need to change
+    - Its eager to go fast: it will just try solve everything at once is once, with-out stopping to see how the picture fits together and that we have the information we need, so we end up going in the wrong direction and missing things.
+2. Gen AI's brain is similar to a human
+	- It needs a plan to refer back to or it will get confused
+	- It forgets things the less it is reminded
+	- It gets clogged up and can't focus when it has too much information
+    - Its bad at multitasking: its better at focusing on one thing at a time
+3. Gen AI is not a mind reader and it doesn't know everything
+    - It will only know what you tell it
+	- It can't consider everything in your brain: it WILL miss things, espically if not reminded
+4. Gen AI will let us be lazy
+    - its happy for us to not read and understand what works
 
-So how can we help deal with some of the problems from above?
+## So what can we do
 
-### Some general tips / guidelines to include in your workflow
-- break the task up into smaller pieces
-    - create a plan with phases, and then with steps for each phase
-    - make sure ai tackles things piece by piece
-    - commit to git often
-- keep some kind of plan for the current task
-    - include discussed requirements, considerations, decisions, as well as a phased action plan // just include the important stuff as ai remembers, want to be to the point here!
-    - adapt and refine the plan as you go
-    - keep it consise
-- always clarify with ai before, as we go, and after to make sure we have considered what we need to and you know whats going on
-    - get it to ask you questions where its uncertain
-    - ask it questions when planning and reviewing, or when your unsure in general
-- get ai to help with the brainstorming / critical thinking
-    - get it to come up with options, compare and recomend one
-    - get it to brainstorm for considerations and things we might of missed
+So want are some of the general things we can do to help deal with the problems mentioned?
 
-### Some questions to ask yourself
+### "vibe-planning" approach
+
+#### plan things out beforehand
+> Make sure the ai tool has a solid plan it can refer back to
+1. Make sure the AI tool has specific relevant context
+2. Break the task up into smaller pieces
+    - make sure we have considered any important requirements/considerations/decisions, and asked questions about any concerns
+    - have phases in your plan with steps for each phase
+    - get the ai to go through the plan phase by phase
+    - keep it concise
+    - create an .md file for the plan if it makes sense
+
+#### as we go
+> Slow down and check things
+- after each phase/step
+    - get the ai to evaluate its work, to our requirements and general good practise
+    - make sure to read and understand, if unsure about anything ask a question
+    - adapt and refine the plan
+    - test/run the code if it makes sense
+    - commit to git
+- if ai results start to get less accurate or it starts to forget things
+    - remind it about whats important
+    - consider compacting model context to current task/phase/direction
+        - if tool doesn't support this save the context/plan to an .md file and start a new chat
+
+## reviewing this approach
+
+### do we always have to stick to the plan?
+Sometimes taking the extra time to pay attention and plan things out does take time we might not have. Or our project is too simple so it isn't all neccessary
+
+I think this approach works best if:
+- we have a large complex project
+- we are iterating rather than creating things fresh
+- we are not trying to get a feature out fast as possible
+
+Sometimes maybe we do want to go as fast as AI can let us.
+But I think there is a balance here, even for smaller tasks projects, I think following the general guidelines is a good idea to ensure some quality.
+
+### some questions to ask yourself
 > for the current task/problem, and considering my current goals here
-- how close should I be working with the ai and monitoring what its doing, what are the consequences of not?
+- how close should I be working with the ai and monitoring what its doing, what are the consequences of not for me and this project?
 - should i be critical thinking here, or should the ai?
 - do I understanding what the ai is doing, do I have a feeling it is missing something?
 
-## A workflow
-> Heres a flexible example workflow considering some of the points mentioned so far
+### won't the tools get better?
+Tools have already improved to help tackle some of the problems mentioned. For example:
+- claude-code creates an todo-list and goes through it
+- claude-code auto-compacts context window as you go
+These fixes can help but don't solve all the problems yet, espically on larger projects, they will improve in the future.
 
-1. Define the task, include relevant context and overall aims
-2. Break the task up into sections/phases, with steps for each phase
-3. Make sure we have considered whats important and asked questions about concerns
-4. Write the plan to an .md file, structure it how it makes sense to you
-5. Get the AI to start running through the plan
-6. As we go:
-    - ask questions about any concerns sooner rather than later
-    - remind it about the important requirements/considerations from the plan
-    - recognise when we need to make a decision / change the plan: get ai to help compare options
-7. After each phase is complete
-    - Get AI to evaluate if we meet our goals and considerations, and check the code for problems/quality
-    - Test and add changes to git if we like what it has done
-8. Rince, repeat and adapt
+## General AI guidelines
+### Simple list
+- have a plan
+- break things up and tackle one at a time
+- give clear context
+- clarify with ai as we go when you are unsure
+- pay attention and understand the ai's output
+- tell the ai exactly what you want it to do
+- consider the ai's context window
+
+### Giving clear context
+- give it some project context but not too much
+- give it aims so it understandings what you are trying to do
+- make sure its clear what its task (what you want it to do)
+
+### Other cool tips
+- get the AI to ask you questions when its unsure
+- get the AI to rate how confident it is in its answers
+- get the AI to help with brainstorming, EG:
+    - do you think there are any considerations we have missed here?
+    - do you see any problems arising?
+    - any decisions we need to make, if so compare options and recomend
+    - come up with three solutions, compare and recomend one?
 
 ## Conclusion
 
-These tools provide great productivity benefits when used well!
+1. AI tools can speed us up and provide productivity benefits, but there are some caveats.
+2. "vibe planning" is a possible approach to help deal with some of the problems
+3. even when we need to go really fast there are good general guidelines we could always follow
 
 ## Some links for further reading
 - https://www.anthropic.com/engineering/claude-code-best-practices
