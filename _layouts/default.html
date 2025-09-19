@@ -14,7 +14,139 @@
 <body>
     <div class="main-content">
         {% include nav.html %}
-        {{ content }}
+        <section class="hero is-primary is-small">
+          <div class="hero-body">
+            <div class="container is-max-widescreen">
+              <h1 class="title">
+                {% if page.layout == 'post' %}
+                  {{ page.title }}
+                {% else %}
+                  {{ page.hero_title }}
+                {% endif %}
+              </h1>
+              {% if page.layout == 'post' and page.description %}
+                <h2 class="subtitle">
+                  {{ page.description }}
+                </h2>
+              {% elsif page.hero_subtitle %}
+                <h2 class="subtitle">
+                  {{ page.hero_subtitle }}
+                </h2>
+              {% endif %}
+            </div>
+          </div>
+        </section>
+        <div class="site-grid">
+            <div class="columns">
+                <aside class="column sidebar-left">
+                    {% if page.layout == 'post' %}
+                        <div class="sidebar-content">
+                            <h6 class="title is-5">Post Navigation</h6>
+                            <div class="content is-small">
+                                {% assign toc_items = '' %}
+                                {% assign headers = content | split: '<h' %}
+                                {% for header in headers %}
+                                    {% if forloop.index > 1 %}
+                                        {% assign header_level = header | slice: 0, 1 %}
+                                        {% if header_level == '2' or header_level == '3' %}
+                                            {% assign header_parts = header | split: '>' %}
+                                            {% assign header_tag = header_parts[0] %}
+                                            {% assign header_content = header_parts[1] | split: '</h' | first %}
+                                            {% assign header_id = header_tag | split: 'id="' %}
+                                            {% if header_id.size > 1 %}
+                                                {% assign id_value = header_id[1] | split: '"' | first %}
+                                                {% assign toc_items = toc_items | append: '<li class="toc-h' | append: header_level | append: '"><a href="#' | append: id_value | append: '">' | append: header_content | append: '</a></li>' %}
+                                            {% endif %}
+                                        {% endif %}
+                                    {% endif %}
+                                {% endfor %}
+
+                                {% if toc_items != '' %}
+                                    <h6 class="title is-6 has-text-weight-semibold">Table of Contents</h6>
+                                    <ul class="post-toc-list">{{ toc_items }}</ul>
+                                {% else %}
+                                    <h6 class="title is-6 has-text-weight-semibold">Table of Contents</h6>
+                                    <p class="has-text-grey-light is-size-7">No headers found in this post.</p>
+                                {% endif %}
+                            </div>
+                        </div>
+                    {% endif %}
+                </aside>
+                <main class="column main-content-inner">
+                    {{ content }}
+                </main>
+                <aside class="column sidebar-right">
+                    {% if page.layout == 'post' %}
+                        <div class="sidebar-content">
+                            <h6 class="title is-5">Site Index</h6>
+                            <div class="content is-small">
+
+                                <!-- Highlighted Posts Section -->
+                                {% assign highlighted_posts = site.posts | where: "tag", "Highlight" | limit: 2 %}
+                                {% if highlighted_posts.size > 0 %}
+                                    <h6 class="title is-6 has-text-weight-semibold">Featured</h6>
+                                    <ul class="site-index-list">
+                                        {% for post in highlighted_posts %}
+                                            <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
+                                        {% endfor %}
+                                    </ul>
+                                {% endif %}
+
+                                <!-- Recent Posts Section (excluding highlighted) -->
+                                {% assign highlighted_urls = highlighted_posts | map: "url" %}
+                                {% assign recent_posts = '' | split: '' %}
+                                {% assign count = 0 %}
+                                {% for post in site.posts %}
+                                    {% unless highlighted_urls contains post.url or count >= 3 %}
+                                        {% assign recent_posts = recent_posts | push: post %}
+                                        {% assign count = count | plus: 1 %}
+                                    {% endunless %}
+                                {% endfor %}
+
+                                {% if recent_posts.size > 0 %}
+                                    <h6 class="title is-6 has-text-weight-semibold">Recent</h6>
+                                    <ul class="site-index-list">
+                                        {% for post in recent_posts %}
+                                            <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
+                                        {% endfor %}
+                                    </ul>
+                                {% endif %}
+
+                                <!-- Top Categories Section -->
+                                {% assign category_counts = '' | split: '' %}
+                                {% for category in site.categories %}
+                                    {% assign cat_name = category[0] %}
+                                    {% assign cat_count = category[1] | size %}
+                                    {% comment %} Pad count with zeros for proper numeric sorting {% endcomment %}
+                                    {% assign padded_count = cat_count %}
+                                    {% if cat_count < 10 %}{% assign padded_count = '00' | append: cat_count %}{% endif %}
+                                    {% if cat_count >= 10 and cat_count < 100 %}{% assign padded_count = '0' | append: cat_count %}{% endif %}
+                                    {% assign cat_data = padded_count | append: '|' | append: cat_name %}
+                                    {% assign category_counts = category_counts | push: cat_data %}
+                                {% endfor %}
+                                {% assign sorted_categories = category_counts | sort | reverse %}
+
+                                <h6 class="title is-6 has-text-weight-semibold">Categories</h6>
+                                <ul class="site-index-list">
+                                    {% for cat_data in sorted_categories limit: 3 %}
+                                        {% assign cat_parts = cat_data | split: '|' %}
+                                        {% assign cat_count = cat_parts[0] | plus: 0 %}
+                                        {% assign cat_name = cat_parts[1] %}
+                                        {% assign cat_slug = cat_name | slugify %}
+                                        <li>
+                                            <a href="{{ '/categories/#category-' | append: cat_slug | prepend: site.baseurl }}">
+                                                {{ cat_name }} ({{ cat_count }})
+                                            </a>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+
+                            </div>
+                        </div>
+                    {% endif %}
+                </aside>
+            </div>
+        </div>
     </div>
     {% include footer.html %}
 
