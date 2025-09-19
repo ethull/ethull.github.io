@@ -29,7 +29,7 @@ concurrency:
 jobs:
   # Build job
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latesr
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -42,7 +42,7 @@ jobs:
       - name: Link Packages
         run: cp -r node_modules/@fortawesome/fontawesome-free/webfonts/ assets/webfonts
       - name: Setup Ruby
-        uses: ruby/setup-ruby@55283cc23133118229fd3f97f9336ee23a179fcf # v1.146.0
+        uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.2.2' # Not needed with a .ruby-version file
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
