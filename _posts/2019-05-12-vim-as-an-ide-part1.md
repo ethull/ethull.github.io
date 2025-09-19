@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Vim as an IDE part 1
-description: Article on how to setup vim to function as a lightweight IDE
+description: How to setup vim to function as a lightweight IDE
 categories:
     - Vim
 comments: true
@@ -9,7 +9,6 @@ date: 2020-05-12T20:34:04+01:00
 display-date:  2020-05-12
 permalink: vim-ide-p1.html
 ---
-Get vim setup.
 
 ## introduction
 IDEs have lots of features and generally can support most of a programmers needs.

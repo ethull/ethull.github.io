@@ -26,7 +26,11 @@ hero_subtitle: "Latest posts and articles"
                         category }}</a>
                     {% endfor %}
                 </p>
-                {{ post.excerpt }}
+                {% if post.description %}
+                    <p>{{ post.description }}</p>
+                {% else %}
+                    {{ post.excerpt }}
+                {% endif %}
                 <p><small> {{ post.display-date }} </small></p>
             </div>
         </div>

@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Transfer files to android using ftp
-description: Article on how to move files between linux and android using ftp
+description: Transfer files from linux to android with mtp
+
 categories:
     - Android
 comments: true
@@ -9,7 +10,6 @@ date: 2021-04-06T18:24:49+01:00
 display-date: 2021-04-06
 permalink: android-ftp.html
 ---
-Transfer files from linux to android with mtp.
 
 ## Introduction
 A common way to transfer files between android and desktop, is to physically plug the phone into the computer, and then transfer files via the mtp (media transder protocol). But this protocol is slow and buggy, and its likely to cause problems when transfering large volumes of files. One alternative to use the ftp protocol.
