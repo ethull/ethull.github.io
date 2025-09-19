@@ -144,4 +144,6 @@ These fixes help but don't solve all the problems yet, especially on larger matu
 
 ## Some links for further reading
 - https://www.anthropic.com/engineering/claude-code-best-practices
+- https://www.reddit.com/r/ClaudeAI/comments/1n28m2s/essential_resources_for_claude_code/
+- https://github.com/rosmur/claudecode-best-practices/blob/main/claudecode_bestpractices.md
 
