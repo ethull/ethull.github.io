@@ -78,11 +78,67 @@
                         <div class="sidebar-content">
                             <h6 class="title is-5">Site Index</h6>
                             <div class="content is-small">
-                                <p>Recent posts and categories will go here.</p>
-                                <ul>
-                                    <li><a href="/blog">Recent Posts</a></li>
-                                    <li><a href="/categories">Categories</a></li>
+
+                                <!-- Highlighted Posts Section -->
+                                {% assign highlighted_posts = site.posts | where: "tag", "Highlight" | limit: 2 %}
+                                {% if highlighted_posts.size > 0 %}
+                                    <h6 class="title is-6 has-text-weight-semibold">Featured</h6>
+                                    <ul class="site-index-list">
+                                        {% for post in highlighted_posts %}
+                                            <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
+                                        {% endfor %}
+                                    </ul>
+                                {% endif %}
+
+                                <!-- Recent Posts Section (excluding highlighted) -->
+                                {% assign highlighted_urls = highlighted_posts | map: "url" %}
+                                {% assign recent_posts = '' | split: '' %}
+                                {% assign count = 0 %}
+                                {% for post in site.posts %}
+                                    {% unless highlighted_urls contains post.url or count >= 3 %}
+                                        {% assign recent_posts = recent_posts | push: post %}
+                                        {% assign count = count | plus: 1 %}
+                                    {% endunless %}
+                                {% endfor %}
+
+                                {% if recent_posts.size > 0 %}
+                                    <h6 class="title is-6 has-text-weight-semibold">Recent</h6>
+                                    <ul class="site-index-list">
+                                        {% for post in recent_posts %}
+                                            <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
+                                        {% endfor %}
+                                    </ul>
+                                {% endif %}
+
+                                <!-- Top Categories Section -->
+                                {% assign category_counts = '' | split: '' %}
+                                {% for category in site.categories %}
+                                    {% assign cat_name = category[0] %}
+                                    {% assign cat_count = category[1] | size %}
+                                    {% comment %} Pad count with zeros for proper numeric sorting {% endcomment %}
+                                    {% assign padded_count = cat_count %}
+                                    {% if cat_count < 10 %}{% assign padded_count = '00' | append: cat_count %}{% endif %}
+                                    {% if cat_count >= 10 and cat_count < 100 %}{% assign padded_count = '0' | append: cat_count %}{% endif %}
+                                    {% assign cat_data = padded_count | append: '|' | append: cat_name %}
+                                    {% assign category_counts = category_counts | push: cat_data %}
+                                {% endfor %}
+                                {% assign sorted_categories = category_counts | sort | reverse %}
+
+                                <h6 class="title is-6 has-text-weight-semibold">Categories</h6>
+                                <ul class="site-index-list">
+                                    {% for cat_data in sorted_categories limit: 3 %}
+                                        {% assign cat_parts = cat_data | split: '|' %}
+                                        {% assign cat_count = cat_parts[0] | plus: 0 %}
+                                        {% assign cat_name = cat_parts[1] %}
+                                        {% assign cat_slug = cat_name | slugify %}
+                                        <li>
+                                            <a href="{{ '/categories/#category-' | append: cat_slug | prepend: site.baseurl }}">
+                                                {{ cat_name }} ({{ cat_count }})
+                                            </a>
+                                        </li>
+                                    {% endfor %}
                                 </ul>
+
                             </div>
                         </div>
                     {% endif %}

@@ -184,6 +184,42 @@ body {
       padding: 0;
     }
   }
+
+  // Site Index styling - displays highlighted posts, recent posts, and top categories
+  .site-index-list {
+    margin-bottom: 1rem;
+
+    li {
+      margin-bottom: 0.3rem;
+      line-height: 1.3;
+
+      a {
+        color: #666;
+        text-decoration: none;
+        font-size: 0.85rem;
+
+        &:hover {
+          color: turquoise;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  // Section titles in site index
+  .title.is-6.has-text-weight-semibold {
+    margin-top: 0.75rem;
+    margin-bottom: 0.4rem;
+    color: #4a4a4a;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
 }
 
 // Author section styling for posts
