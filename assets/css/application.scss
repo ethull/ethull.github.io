@@ -120,22 +120,68 @@ body {
   border-radius: 4px;
   padding: 1rem;
   margin-bottom: 1rem;
-  
+
   .title {
     margin-bottom: 0.5rem;
     color: #363636;
   }
-  
+
   .content {
     margin-bottom: 0;
-    
+
     ul {
       margin-top: 0.5rem;
     }
-    
+
     p {
       color: #666;
       font-size: 0.875rem;
+    }
+  }
+
+  // Table of Contents styling - displays H2 and H3 headers from post content
+  // H2 headers are main items, H3 headers are indented sub-items
+  .toc-h2 {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+
+    a {
+      color: #363636;
+      text-decoration: none;
+
+      &:hover {
+        color: turquoise;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .toc-h3 {
+    font-weight: 400;
+    font-size: 0.9em;
+    margin-left: 1rem; // Indent H3 headers to show hierarchy
+    margin-bottom: 0.15rem;
+
+    a {
+      color: #666;
+      text-decoration: none;
+
+      &:hover {
+        color: turquoise;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  // Remove default list styling for table of contents
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin: 0;
+      padding: 0;
     }
   }
 }

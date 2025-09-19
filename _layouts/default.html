@@ -41,13 +41,31 @@
                 <aside class="column sidebar-left">
                     {% if page.layout == 'post' %}
                         <div class="sidebar-content">
-                            <h6 class="title is-6">Post Navigation</h6>
+                            <h5 class="title is-5">Post Navigation</h5>
                             <div class="content is-small">
-                                <p>Table of contents and related posts will go here.</p>
-                                <ul>
-                                    <li><a href="#introduction">Introduction</a></li>
-                                    <li><a href="#conclusion">Conclusion</a></li>
-                                </ul>
+                                {% assign toc_items = '' %}
+                                {% assign headers = content | split: '<h' %}
+                                {% for header in headers %}
+                                    {% if forloop.index > 1 %}
+                                        {% assign header_level = header | slice: 0, 1 %}
+                                        {% if header_level == '2' or header_level == '3' %}
+                                            {% assign header_parts = header | split: '>' %}
+                                            {% assign header_tag = header_parts[0] %}
+                                            {% assign header_content = header_parts[1] | split: '</h' | first %}
+                                            {% assign header_id = header_tag | split: 'id="' %}
+                                            {% if header_id.size > 1 %}
+                                                {% assign id_value = header_id[1] | split: '"' | first %}
+                                                {% assign toc_items = toc_items | append: '<li class="toc-h' | append: header_level | append: '"><a href="#' | append: id_value | append: '">' | append: header_content | append: '</a></li>' %}
+                                            {% endif %}
+                                        {% endif %}
+                                    {% endif %}
+                                {% endfor %}
+
+                                {% if toc_items != '' %}
+                                    <ul>{{ toc_items }}</ul>
+                                {% else %}
+                                    <p class="has-text-grey-light">No headers found in this post.</p>
+                                {% endif %}
                             </div>
                         </div>
                     {% endif %}
@@ -58,7 +76,7 @@
                 <aside class="column sidebar-right">
                     {% if page.layout == 'post' %}
                         <div class="sidebar-content">
-                            <h6 class="title is-6">Site Index</h6>
+                            <h6 class="title is-5">Site Index</h6>
                             <div class="content is-small">
                                 <p>Recent posts and categories will go here.</p>
                                 <ul>
