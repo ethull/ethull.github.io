@@ -55,8 +55,10 @@ body {
 
 // 3-Column Responsive Grid System
 .site-grid {
-  padding: 2rem 0; // Add vertical spacing
-  
+  max-width: 1400px; // Container constraint for better sidebar positioning
+  margin: 0 auto; // Center the layout on all screen sizes
+  padding: 2rem; // Uniform spacing around the container
+
   .columns {
     margin: 0; // Remove default Bulma margins
     min-height: auto;
