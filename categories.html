@@ -1,18 +1,101 @@
 ---
 layout: default
 hero_title: "Blog Categories"
-hero_subtitle: "Cool categories"
+hero_subtitle: "Browse posts by category"
 ---
-    <aside class="menu">
-      {% for category in site.categories %} {% capture category_name %}{{
-      category | first }}{% endcapture %}
-      <p class="menu-label" id="category-{{ category | first | slugize }}">
-        {{ category | first }}
-      </p>
-      <ul class="menu-list">
-        {% for post in site.categories[category_name] %}
-        <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+
+<script src="{{ "/assets/js/category-filter.js" | prepend: site.baseurl }}"></script>
+
+<section class="section">
+  <div class="container">
+
+    <!-- Category Filter Tabs -->
+    <div class="tabs is-centered is-boxed" id="category-tabs">
+      <ul>
+        <li class="is-active" data-filter="all">
+          <a>
+            <span>All Categories</span>
+          </a>
+        </li>
+        {% assign sorted_categories = site.categories | sort %}
+        {% assign category_counts = '' | split: '' %}
+        {% for category in sorted_categories %}
+          {% assign cat_name = category[0] %}
+          {% assign cat_count = category[1] | size %}
+          {% comment %} Pad count with zeros for proper numeric sorting {% endcomment %}
+          {% assign padded_count = cat_count %}
+          {% if cat_count < 10 %}{% assign padded_count = '00' | append: cat_count %}{% endif %}
+          {% if cat_count >= 10 and cat_count < 100 %}{% assign padded_count = '0' | append: cat_count %}{% endif %}
+          {% assign cat_data = padded_count | append: '|' | append: cat_name %}
+          {% assign category_counts = category_counts | push: cat_data %}
+        {% endfor %}
+
+        <!-- Sort by post count (descending) -->
+        {% assign sorted_by_count = category_counts | sort | reverse %}
+        {% for cat_data in sorted_by_count %}
+          {% assign cat_parts = cat_data | split: '|' %}
+          {% assign cat_count = cat_parts[0] | plus: 0 %}
+          {% assign cat_name = cat_parts[1] %}
+          {% assign cat_slug = cat_name | slugify %}
+          <li data-filter="{{ cat_slug }}">
+            <a>
+              <span>{{ cat_name }}</span>
+              <span class="tag is-rounded is-small">{{ cat_count }}</span>
+            </a>
+          </li>
         {% endfor %}
       </ul>
+    </div>
+
+    <!-- Categories Content -->
+    <div class="content" id="categories-content">
+
+      <!-- Sort categories by post count for display -->
+      {% for cat_data in sorted_by_count %}
+        {% assign cat_parts = cat_data | split: '|' %}
+        {% assign cat_count = cat_parts[0] | plus: 0 %}
+        {% assign cat_name = cat_parts[1] %}
+        {% assign cat_slug = cat_name | slugify %}
+
+        <div class="category-section" id="category-{{ cat_slug }}" data-category="{{ cat_slug }}">
+          <h3 class="title is-4">
+            {{ cat_name }}
+            <span class="tag is-primary is-light">{{ cat_count }} posts</span>
+          </h3>
+
+          <div class="columns is-multiline">
+            {% for post in site.categories[cat_name] %}
+              <div class="column is-half">
+                <div class="box">
+                  <article class="media">
+                    <div class="media-content">
+                      <div class="content">
+                        <p>
+                          <strong>
+                            <a href="{{ post.url | prepend: site.baseurl }}" class="has-text-dark">
+                              {{ post.title }}
+                            </a>
+                          </strong>
+                          <br>
+                          <small class="has-text-grey">
+                            {{ post.date | date: "%B %d, %Y" }}
+                          </small>
+                          {% if post.description %}
+                            <br>
+                            <span class="has-text-grey-dark">{{ post.description }}</span>
+                          {% endif %}
+                        </p>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
       {% endfor %}
-    </aside>
+
+    </div>
+  </div>
+</section>
+
