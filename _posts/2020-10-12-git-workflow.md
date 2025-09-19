@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Basic git workflows
-description: Article on using git collabratively
+description: Use git collabratively with a basic forking workflow
 categories:
     - Dev
 comments: true
@@ -9,7 +9,6 @@ date: 2020-10-12T12:22:00+01:00
 display-date:  2020-10-12
 permalink: git-workflow.html
 ---
-Use git with a basic forking workflow.
 
 ### Introduction
 Guide to use git with a basic workflow, which will involve:
