@@ -41,7 +41,7 @@
                 <aside class="column sidebar-left">
                     {% if page.layout == 'post' %}
                         <div class="sidebar-content">
-                            <h5 class="title is-5">Post Navigation</h5>
+                            <h6 class="title is-5">Post Navigation</h6>
                             <div class="content is-small">
                                 {% assign toc_items = '' %}
                                 {% assign headers = content | split: '<h' %}
@@ -62,9 +62,11 @@
                                 {% endfor %}
 
                                 {% if toc_items != '' %}
-                                    <ul>{{ toc_items }}</ul>
+                                    <h6 class="title is-6 has-text-weight-semibold">Table of Contents</h6>
+                                    <ul class="post-toc-list">{{ toc_items }}</ul>
                                 {% else %}
-                                    <p class="has-text-grey-light">No headers found in this post.</p>
+                                    <h6 class="title is-6 has-text-weight-semibold">Table of Contents</h6>
+                                    <p class="has-text-grey-light is-size-7">No headers found in this post.</p>
                                 {% endif %}
                             </div>
                         </div>

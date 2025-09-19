@@ -139,49 +139,49 @@ body {
     }
   }
 
-  // Table of Contents styling - displays H2 and H3 headers from post content
-  // H2 headers are main items, H3 headers are indented sub-items
-  .toc-h2 {
-    font-weight: 600;
-    margin-bottom: 0.25rem;
-
-    a {
-      color: #363636;
-      text-decoration: none;
-
-      &:hover {
-        color: turquoise;
-        text-decoration: underline;
-      }
-    }
-  }
-
-  .toc-h3 {
-    font-weight: 400;
-    font-size: 0.9em;
-    margin-left: 1rem; // Indent H3 headers to show hierarchy
-    margin-bottom: 0.15rem;
-
-    a {
-      color: #666;
-      text-decoration: none;
-
-      &:hover {
-        color: turquoise;
-        text-decoration: underline;
-      }
-    }
-  }
-
-  // Remove default list styling for table of contents
-  ul {
-    list-style: none;
+  // Post Table of Contents styling - displays H2 and H3 headers from post content
+  // Matches Site Index styling quality but with semantic class names
+  .post-toc-list {
+    list-style: disc;
     margin: 0;
-    padding: 0;
+    padding-left: 1.25rem;
 
     li {
-      margin: 0;
+      margin-bottom: 0.3rem;
       padding: 0;
+    }
+
+    .toc-h2 {
+      font-weight: 400;
+      line-height: 1.3;
+
+      a {
+        color: #4a4a4a;
+        text-decoration: none;
+        font-size: 0.85rem;
+
+        &:hover {
+          color: turquoise;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .toc-h3 {
+      font-weight: 400;
+      margin-left: 1rem; // Indent H3 headers to show hierarchy
+      line-height: 1.3;
+
+      a {
+        color: #666;
+        text-decoration: none;
+        font-size: 0.8rem;
+
+        &:hover {
+          color: turquoise;
+          text-decoration: underline;
+        }
+      }
     }
   }
 
