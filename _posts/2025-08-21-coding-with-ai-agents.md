@@ -63,6 +63,7 @@ There are some fundamental problems with Gen AI (some of which are also fundamen
 
 #### Plan things out beforehand
 > Make sure the AI tool has a solid plan it can refer back to
+
 1. Make sure the AI has specific relevant context
 2. Break the task up into smaller pieces
     - Make sure we have considered any important requirements/considerations/decisions, and asked questions about any concerns
@@ -73,6 +74,7 @@ There are some fundamental problems with Gen AI (some of which are also fundamen
 
 #### As we go
 > Slow down and check things
+
 - After each phase/step
     - Get the AI to evaluate its work to our requirements and general good practice
     - Make sure to read and understand its output, if unsure about anything ask a question
@@ -99,6 +101,7 @@ But I think there is a balance here, even for smaller tasks/projects, I think fo
 
 ### Some questions to ask yourself
 > For the current task/problem, and considering my current goals here
+
 - How close should I be working with the AI and monitoring what it's doing, what are the consequences of not for me and this project?
 - Should I be critical thinking here, or should the AI?
 - Do I understand what the AI is doing, do I have a feeling it is missing something?
