@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Vim as an IDE part 2
-description: Article on how to setup vim to function as a lightweight IDE
+description: Replace IDE's with vim?
 categories:
     - Vim
 comments: true
@@ -9,7 +9,6 @@ date: 2020-05-12T20:34:04+01:00
 display-date:  2020-05-12
 permalink: vim-ide-p2.html
 ---
-Replace IDE's with vim?
 
 ## introduction
 This is an extension to my first vim-ide post.
