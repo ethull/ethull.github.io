@@ -5,7 +5,6 @@ description: How to program with AI agent coding tools using a vibe-planning / p
 categories:
     - Programming
     - AI
-tag: Highlight
 comments: true
 date: 2025-08-21T13:09:07+01:00
 display-date: 2025-08-21
