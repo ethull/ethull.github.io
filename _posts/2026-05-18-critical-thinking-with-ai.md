@@ -39,6 +39,7 @@ I think the best answer here is a mix of
 - some simple guidelines for prompting AI smartly
 - figuring when to use AI and when to not
 
+For example
 - implement mindfullness breaks: take 5 minute breaks to think
     - do these routinely and/or whenever you notice poor hygiene / general work quality signs
     - what should I be working on now: whats my highest priority
