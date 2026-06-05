@@ -6,8 +6,8 @@ categories:
     - AI
 tag: Highlight
 comments: true
-date: 2026-05-18T10:26:50000Z
-display-date:  2026-05-18
+date: 2026-05-18T10:26:20+01:00
+display-date: 2026-05-18
 permalink: critical-think-ai.html
 ---
 
